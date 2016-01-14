@@ -103,7 +103,7 @@ module Kitchen
 
         def docker_exec_command(container_id, cmd, opt = {})
           exec_cmd = "exec"
-          exec_cmd << " -t" if opt[:tty]
+          exec_cmd << " -t" #if opt[:tty]
           exec_cmd << " -i" if opt[:interactive]
           exec_cmd << " #{container_id} #{wrap_command(cmd)}"
         end
